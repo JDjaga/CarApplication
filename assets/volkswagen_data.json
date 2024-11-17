@@ -1,0 +1,25 @@
+{
+  "cars": [
+    {
+      "model": "Volkswagen Golf",
+      "description": "A compact car that offers a balance of performance and practicality.",
+      "year": 2022,
+      "engine": "2.0L I4",
+      "power": "228 hp"
+    },
+    {
+      "model": "Volkswagen Passat",
+      "description": "A midsize sedan known for its spacious interior and smooth ride.",
+      "year": 2022,
+      "engine": "2.0L I4",
+      "power": "174 hp"
+    },
+    {
+      "model": "Volkswagen Tiguan",
+      "description": "A compact SUV that combines versatility with advanced technology.",
+      "year": 2022,
+      "engine": "2.0L I4",
+      "power": "184 hp"
+    }
+  ]
+}

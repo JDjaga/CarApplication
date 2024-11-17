@@ -1,0 +1,56 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    // Define the namespace for your application. This is required for AGP 7.0.0+.
+    namespace = "com.example.notification"
+
+    // Set the compile SDK version and NDK version from Flutter settings.
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    // Java compatibility settings for consistent builds.
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    // Kotlin compatibility settings for consistent builds.
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        // Define the unique application ID.
+        applicationId = "com.example.notification"
+
+        // Set the minimum and target SDK versions from Flutter settings.
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+
+        // Define versioning for your application.
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Signing configuration for release builds. Update this with your own keys when ready for production.
+            signingConfig = signingConfigs.debug
+
+            // Enable code shrinking, obfuscation, and optimization for release builds.
+            // Uncomment the following lines if you want to enable ProGuard or R8.
+            // minifyEnabled true
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    // Link the Flutter module to the Android project.
+    source = "../.."
+}
